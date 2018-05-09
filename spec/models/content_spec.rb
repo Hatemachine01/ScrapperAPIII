@@ -13,12 +13,5 @@ RSpec.describe Content, type: :model do
 
    	expect(@content).not_to be_valid
    end
-
-
-   it "has a DB  belongs association to WebAddress" do 
-   	  relation = described_class.reflect_on_association(:webaddress)
-    	
-      expect(relation.macro).to eq(:belongs_to)
-   end
   end
 end

@@ -4,6 +4,7 @@ FactoryGirl.define do
   h2 "h2"
   h3 "h3"
   a  "links"
+  url
  end
 end
 
