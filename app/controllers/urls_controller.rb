@@ -7,8 +7,7 @@ class UrlsController < ApplicationController
 
 	def create
 		@url = Url.create!(url_params)
-    	json_response(@url)
-    	p url_params
+		#Call Parser Module
 	end
 
 private
