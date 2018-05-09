@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
 get '/urls' , to:'urls#index'
 
+
+post '/parse' , to:'urls#create'
+
 end

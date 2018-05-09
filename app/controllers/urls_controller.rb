@@ -5,4 +5,9 @@ class UrlsController < ApplicationController
     	json_response(@urls)
 	end
 
+	def create
+		@url = Url.create!(url_params)
+    	json_response(@url)
+	end
+
 end
