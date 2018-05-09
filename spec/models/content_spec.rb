@@ -6,10 +6,8 @@ RSpec.describe Content, type: :model do
 	end
 
    it "cannot be created without all attributes" do 
-   	@content.h1 = nil
-    @content.h2 = nil
-   	@content.h3 = nil
-    @content.a = nil
+   	@content.headers = nil
+    @content.links = nil
 
    	expect(@content).not_to be_valid
    end

@@ -13,10 +13,8 @@
 ActiveRecord::Schema.define(version: 20180509000448) do
 
   create_table "contents", force: :cascade do |t|
-    t.string "h1"
-    t.string "h2"
-    t.string "h3"
-    t.string "a"
+    t.text "headers"
+    t.text "links"
     t.integer "url_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

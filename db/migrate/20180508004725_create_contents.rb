@@ -1,10 +1,9 @@
 class CreateContents < ActiveRecord::Migration[5.1]
   def change
     create_table :contents do |t|
-      t.string :h1
-      t.string :h2
-      t.string :h3
-      t.string :a
+      t.text :headers
+      t.text :links
+
       t.references :url, foreign_key: true
 
 

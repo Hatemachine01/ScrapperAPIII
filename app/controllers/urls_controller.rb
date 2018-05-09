@@ -1,5 +1,5 @@
 class UrlsController < ApplicationController
-
+	include DataSaver
 	def index
 		@urls = Url.all
     	json_response(@urls)
@@ -8,7 +8,9 @@ class UrlsController < ApplicationController
 	def create
 		@url = Url.create!(url_params)
 		#Call Parser Module
-		content = @url.get_content(@url.url)
+		page_content = @url.get_content(@url.url)
+		store_data(page_content, @url)
+		json_response(@url.content)
 	end
 
 private

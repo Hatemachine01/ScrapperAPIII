@@ -5,8 +5,7 @@ has_one :content
 #validations
 validates_presence_of :url
 
-	def scrape_url(url)
-		content = Scraper.get_content(url)
-	end
-
 end
+
+#links.map {|element| element["href"]}
+
