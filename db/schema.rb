@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508004725) do
+ActiveRecord::Schema.define(version: 20180509000448) do
 
   create_table "contents", force: :cascade do |t|
     t.string "h1"
     t.string "h2"
     t.string "h3"
     t.string "a"
-    t.integer "WebAddress_id"
+    t.integer "url_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["WebAddress_id"], name: "index_contents_on_WebAddress_id"
+    t.index ["url_id"], name: "index_contents_on_url_id"
   end
 
-  create_table "web_addresses", force: :cascade do |t|
+  create_table "urls", force: :cascade do |t|
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
