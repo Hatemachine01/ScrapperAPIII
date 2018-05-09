@@ -8,6 +8,7 @@ class UrlsController < ApplicationController
 	def create
 		@url = Url.create!(url_params)
 		#Call Parser Module
+		content = @url.get_content(@url.url)
 	end
 
 private
