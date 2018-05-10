@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :url do
-    url "www.google.com"
+    url "http://www.google.com"
     content nil
   end
 end

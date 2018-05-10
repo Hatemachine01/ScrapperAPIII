@@ -11,8 +11,6 @@ class UrlsController < JSONAPI::ResourceController
 		json_response(@url.content)
 	end
 
-	
-
 private
 
   def url_params
