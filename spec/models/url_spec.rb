@@ -8,7 +8,6 @@ RSpec.describe Url, type: :model do
    it "cannot be created without an url" do 
    	@url.url = nil
 
-
    	expect(@url).not_to be_valid
    end
 
@@ -16,13 +15,11 @@ RSpec.describe Url, type: :model do
    it "Cannot be created with a invalid url" do 
     @url.url = 'ww.invalidurls.con'
 
-
     expect(@url).not_to be_valid
    end
 
    it "URL must include http/s" do 
     @url.url = 'www.invalidurls.com'
-
 
     expect(@url).not_to be_valid
    end
