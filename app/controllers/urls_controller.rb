@@ -1,10 +1,8 @@
-class UrlsController < ApplicationController
+class UrlsController < JSONAPI::ResourceController
 	include DataSaver
-	def index
-		@urls = Url.all
-    	json_response(@urls)
-	end
-
+	include Response
+	
+	
 	def create
 		@url = Url.create!(url_params)
 		#Call Parser Module
@@ -13,9 +11,13 @@ class UrlsController < ApplicationController
 		json_response(@url.content)
 	end
 
+	
+
 private
 
   def url_params
     params.permit(:url)
   end
 end
+
+
