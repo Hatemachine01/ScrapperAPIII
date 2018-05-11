@@ -50,7 +50,7 @@ bundle exec rails s
 Main end-points
 
 GET = http://localhost:3000/urls
-POST = http://localhost:3000/urls={params}
+POST = http://localhost:3000/urls?url={website_to_be_scraped}
 
 run rails routes to see other avaliable routes.
 ```
