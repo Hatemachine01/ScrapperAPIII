@@ -26,7 +26,7 @@ bundle exec rake db:migrate
 
 ##### 3. Run Rspec
 
-You can start the rails server using the command given below.
+Check to see if all tests are green.
 
 ```ruby
 rspec
