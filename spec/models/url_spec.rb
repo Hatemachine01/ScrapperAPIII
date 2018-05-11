@@ -11,7 +11,6 @@ RSpec.describe Url, type: :model do
    	expect(@url).not_to be_valid
    end
 
-
    it "Cannot be created with a invalid url" do 
     @url.url = 'ww.invalidurls.con'
 
@@ -23,7 +22,6 @@ RSpec.describe Url, type: :model do
 
     expect(@url).not_to be_valid
    end
-
 
    it "has one content" do 
    	relation = described_class.reflect_on_association(:content)

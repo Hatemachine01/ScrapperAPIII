@@ -1,4 +1,5 @@
 module Scraper
+#scrapes content form website.
 require 'nokogiri'
 require "uri"
 require 'open-uri'

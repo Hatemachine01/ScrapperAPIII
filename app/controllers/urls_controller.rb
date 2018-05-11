@@ -5,9 +5,11 @@ class UrlsController < JSONAPI::ResourceController
 	
 	def create
 		@url = Url.create!(url_params)
-		#Call Parser Module
+		#Calls Parser Module
 		page_content = @url.get_content(@url.url)
+		#Calls Module that saves data 
 		store_data(page_content, @url)
+		#returns content of URL 
 		json_response(@url.content)
 	end
 
