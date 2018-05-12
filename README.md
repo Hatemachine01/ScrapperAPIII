@@ -13,7 +13,15 @@ git git@github.com:Hatemachine01/ScrapperAPIII.git
 ```
 
 
-##### 2. Create and setup the database
+##### 3. Install Dependencies 
+
+
+```ruby
+bundle
+```
+
+
+##### 4. Create and setup the database
 
 Run the following commands to create and setup the database.
 
@@ -24,7 +32,7 @@ bundle exec rake db:migrate
 ```
 
 
-##### 3. Run Rspec
+##### 5. Run Rspec
 
 Check to see if all tests are green.
 
